@@ -1,0 +1,49 @@
+PODS:
+  - cmark (0.22.0)
+  - CocoaMarkdown (0.0.1):
+    - cmark (>= 0.22.0)
+    - Ono
+  - Contentful (0.1.0):
+    - Decodable (~> 0.3.2)
+    - Interstellar (~> 1.3.0)
+  - Decodable (0.3.3)
+  - Interstellar (1.3.0):
+    - Interstellar/Core (= 1.3.0)
+    - Interstellar/Warpdrive (= 1.3.0)
+  - Interstellar/Core (1.3.0)
+  - Interstellar/Warpdrive (1.3.0):
+    - Interstellar/Core
+  - MMMarkdown (0.5.1)
+  - Ono (1.2.2)
+
+DEPENDENCIES:
+  - cmark
+  - CocoaMarkdown (from `https://github.com/neonichu/CocoaMarkdown`, branch `podspec`)
+  - Contentful (from `https://github.com/contentful/contentful.swift`)
+  - MMMarkdown
+
+EXTERNAL SOURCES:
+  CocoaMarkdown:
+    :branch: podspec
+    :git: https://github.com/neonichu/CocoaMarkdown
+  Contentful:
+    :git: https://github.com/contentful/contentful.swift
+
+CHECKOUT OPTIONS:
+  CocoaMarkdown:
+    :commit: b0e48a06c8a6dbd44be43f3246b34da35b7ea843
+    :git: https://github.com/neonichu/CocoaMarkdown
+  Contentful:
+    :commit: 792ece70b969e08f7a429f57912173644eb1981c
+    :git: https://github.com/contentful/contentful.swift
+
+SPEC CHECKSUMS:
+  cmark: aed73f5a5b8cd9d7388cefc48c0173f70e746ad4
+  CocoaMarkdown: b06348cdc05a584793ff7545d4366c787d19c617
+  Contentful: b1601e8b38c133bd6e3be483b3e5116507a0c051
+  Decodable: 5997b5e329e651f828dfcd458216b4c8286867cf
+  Interstellar: 3d47f37eff7e81fbaa9a74bd903f362eb165b159
+  MMMarkdown: 06f7989e0350d10a7de50516af6c812402ce554b
+  Ono: 80b1c686777d3f6d5d5ce6fcac8a74afef4ca197
+
+COCOAPODS: 0.39.0
