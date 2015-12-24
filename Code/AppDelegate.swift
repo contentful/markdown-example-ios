@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         let tabBarController = UITabBarController()
         tabBarController.title = "Contentful Markdown Example"
-        tabBarController.viewControllers = [MDWebViewController(), MDTextViewController()]
+        tabBarController.viewControllers = [MDWebViewController(), MDTextViewController(), MDEmbedlyViewController()]
 
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.backgroundColor = UIColor.whiteColor()
