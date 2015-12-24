@@ -21,6 +21,7 @@ DEPENDENCIES:
   - CocoaMarkdown (from `https://github.com/neonichu/CocoaMarkdown`, branch `podspec`)
   - Contentful (from `https://github.com/contentful/contentful.swift`)
   - MMMarkdown
+  - Ono
 
 EXTERNAL SOURCES:
   CocoaMarkdown:

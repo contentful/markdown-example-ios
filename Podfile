@@ -9,3 +9,5 @@ pod 'CocoaMarkdown', :git => 'https://github.com/neonichu/CocoaMarkdown', :branc
 #pod 'CocoaMarkdown', :path => '../../Sources/CocoaMarkdown'
 pod 'Contentful', :git => 'https://github.com/contentful/contentful.swift'
 pod 'MMMarkdown'
+pod 'Ono', :inhibit_warnings => true
+
