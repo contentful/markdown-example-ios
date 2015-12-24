@@ -20,7 +20,7 @@ DEPENDENCIES:
   - cmark
   - CocoaMarkdown (from `https://github.com/neonichu/CocoaMarkdown`, branch `podspec`)
   - Contentful (from `https://github.com/contentful/contentful.swift`)
-  - MMMarkdown
+  - MMMarkdown (from `Vendor/MMMarkdown.podspec.json`)
   - Ono
 
 EXTERNAL SOURCES:
@@ -29,6 +29,8 @@ EXTERNAL SOURCES:
     :git: https://github.com/neonichu/CocoaMarkdown
   Contentful:
     :git: https://github.com/contentful/contentful.swift
+  MMMarkdown:
+    :podspec: Vendor/MMMarkdown.podspec.json
 
 CHECKOUT OPTIONS:
   CocoaMarkdown:
@@ -37,6 +39,9 @@ CHECKOUT OPTIONS:
   Contentful:
     :commit: 792ece70b969e08f7a429f57912173644eb1981c
     :git: https://github.com/contentful/contentful.swift
+  MMMarkdown:
+    :commit: f00a45fa07de39d48a5dabd3290a9d46d0c6cb1d
+    :git: https://github.com/neonichu/MMMarkdown.git
 
 SPEC CHECKSUMS:
   cmark: aed73f5a5b8cd9d7388cefc48c0173f70e746ad4
@@ -44,7 +49,7 @@ SPEC CHECKSUMS:
   Contentful: b1601e8b38c133bd6e3be483b3e5116507a0c051
   Decodable: 5997b5e329e651f828dfcd458216b4c8286867cf
   Interstellar: 3d47f37eff7e81fbaa9a74bd903f362eb165b159
-  MMMarkdown: 06f7989e0350d10a7de50516af6c812402ce554b
+  MMMarkdown: 8eb9859e3ff20657f363b4b6eb8e42dc38ea180c
   Ono: 80b1c686777d3f6d5d5ce6fcac8a74afef4ca197
 
 COCOAPODS: 0.39.0
