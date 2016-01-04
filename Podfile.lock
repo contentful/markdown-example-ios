@@ -13,7 +13,7 @@ PODS:
   - Interstellar/Core (1.3.0)
   - Interstellar/Warpdrive (1.3.0):
     - Interstellar/Core
-  - MMMarkdown (0.5.1)
+  - MMMarkdown (0.5.2)
   - Ono (1.2.2)
 
 DEPENDENCIES:
@@ -37,19 +37,16 @@ CHECKOUT OPTIONS:
     :commit: b0e48a06c8a6dbd44be43f3246b34da35b7ea843
     :git: https://github.com/neonichu/CocoaMarkdown
   Contentful:
-    :commit: 792ece70b969e08f7a429f57912173644eb1981c
+    :commit: f117fdc67a6d9c3a7ba3deda9ebe1ad9020f3f2c
     :git: https://github.com/contentful/contentful.swift
-  MMMarkdown:
-    :commit: f00a45fa07de39d48a5dabd3290a9d46d0c6cb1d
-    :git: https://github.com/neonichu/MMMarkdown.git
 
 SPEC CHECKSUMS:
   cmark: aed73f5a5b8cd9d7388cefc48c0173f70e746ad4
   CocoaMarkdown: b06348cdc05a584793ff7545d4366c787d19c617
-  Contentful: b1601e8b38c133bd6e3be483b3e5116507a0c051
+  Contentful: d3b13045ce8b72aa561c2f73dde508dbdeaa5a31
   Decodable: 5997b5e329e651f828dfcd458216b4c8286867cf
   Interstellar: 3d47f37eff7e81fbaa9a74bd903f362eb165b159
-  MMMarkdown: 8eb9859e3ff20657f363b4b6eb8e42dc38ea180c
+  MMMarkdown: cecb051181988f4f1f23b91c97b2bde3a9bac40f
   Ono: 80b1c686777d3f6d5d5ce6fcac8a74afef4ca197
 
 COCOAPODS: 0.39.0
