@@ -9,6 +9,7 @@ This is an iOS example application displaying Markdown content stored on [Conten
 Install dependencies using [CocoaPods][2]:
 
 ```bash
+$ brew install re2c
 $ pod install
 ```
 
