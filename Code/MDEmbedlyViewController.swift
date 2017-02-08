@@ -18,7 +18,7 @@ class MDEmbedlyViewController: MDWebViewController {
         self.tabBarItem = UITabBarItem(title: "Embedly", image: UIImage(named: "webView"), tag: 0)
     }
 
-    override func convertMarkdownToHTML(markdown: String) throws -> String {
+    override func convertMarkdownToHTML(_ markdown: String) throws -> String {
         let html = try super.convertMarkdownToHTML(markdown)
         return "<html><head>\(embedlyCode)</head><body>\(html)</body></html>"
     }

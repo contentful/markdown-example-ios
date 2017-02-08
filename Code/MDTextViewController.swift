@@ -22,17 +22,17 @@ class MDTextViewController: UIViewController {
         super.viewDidLoad()
 
         let textView = UITextView(frame: view.bounds)
-        textView.editable = false
+        textView.isEditable = false
         view.addSubview(textView)
 
-        client.fetchEntry(entryId).1.next { (entry) in
+        client.fetchEntry(identifier: entryId).1.next { (entry) in
             if let markdown = entry.fields["body"] as? String {
-                let data = markdown.dataUsingEncoding(NSUTF8StringEncoding)
+                let data = markdown.data(using: String.Encoding.utf8)
                 let document = CMDocument(data: data, options: [])
                 let renderer = CMAttributedStringRenderer(document: document, attributes: CMTextAttributes())
 
-                dispatch_async(dispatch_get_main_queue()) {
-                    textView.attributedText = renderer.render()
+                DispatchQueue.main.async {
+                    textView.attributedText = renderer?.render()
                 }
             }
         }.error { (error) in

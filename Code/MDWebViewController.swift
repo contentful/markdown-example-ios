@@ -18,8 +18,8 @@ class MDWebViewController: UIViewController {
         self.tabBarItem = UITabBarItem(title: "WebView", image: UIImage(named: "webView"), tag: 0)
     }
 
-    func convertMarkdownToHTML(markdown: String) throws -> String {
-        return try MMMarkdown.HTMLStringWithMarkdown(markdown, extensions: MMMarkdownExtensions.GitHubFlavored)
+    func convertMarkdownToHTML(_ markdown: String) throws -> String {
+        return try MMMarkdown.htmlString(withMarkdown: markdown, extensions: MMMarkdownExtensions.gitHubFlavored)
     }
 
     override func viewDidLoad() {
@@ -31,11 +31,11 @@ class MDWebViewController: UIViewController {
         webView.scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: tabBarController?.tabBar.frame.size.height ?? 0, right: 0)
         webView.scrollView.scrollIndicatorInsets = webView.scrollView.contentInset
 
-        client.fetchEntry(entryId).1.next { (entry) in
+        client.fetchEntry(identifier: entryId).1.next { (entry) in
             if let markdown = entry.fields["body"] as? String {
                 do {
                     let html = try self.convertMarkdownToHTML(markdown)
-                    webView.loadHTMLString(html, baseURL: NSURL(string: "https://www.contentful.com"))
+                    webView.loadHTMLString(html, baseURL: URL(string: "https://www.contentful.com"))
                 } catch let error {
                     showError(error, self)
                 }
