@@ -1,12 +1,26 @@
+#!/usr/bin/ruby
+
 source 'https://github.com/CocoaPods/Specs'
 source 'https://github.com/contentful/CocoaPodsSpecs'
 
 use_frameworks!
 
-#pod 'Bypass', :inhibit_warnings => true
-pod 'cmark', :inhibit_warnings => true
-pod 'CocoaMarkdown', :git => 'https://github.com/neonichu/CocoaMarkdown', :branch => 'podspec'
-#pod 'CocoaMarkdown', :path => '../../Sources/CocoaMarkdown'
-pod 'Contentful', :git => 'https://github.com/contentful/contentful.swift'
-pod 'MMMarkdown', :inhibit_warnings => true, :podspec => 'Vendor/MMMarkdown.podspec.json'
-pod 'Ono', :inhibit_warnings => true
+platform :ios, '8.0'
+
+target 'Markdown' do
+
+  pod 'cmark', :inhibit_warnings => true
+  pod 'CocoaMarkdown', :git => 'https://github.com/indragiek/CocoaMarkdown', :branch => 'master'
+  pod 'Contentful', '~> 0.3.0'
+  pod 'MMMarkdown'
+  pod 'Ono'
+
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '3.0'
+    end
+  end
+end
